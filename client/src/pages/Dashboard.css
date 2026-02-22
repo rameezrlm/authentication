@@ -1,0 +1,110 @@
+/* 1. Main Wrapper: Forces full width and side-by-side layout */
+.dashboard-wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7f6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: absolute; /* This guarantees it breaks out of Vite's centered div */
+  top: 0;
+  left: 0;
+}
+
+/* 2. Left Sidebar */
+.sidebar {
+  width: 320px;
+  background: white;
+  padding: 40px 30px;
+  box-shadow: 4px 0 15px rgba(0,0,0,0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  z-index: 10;
+}
+
+.brand-title {
+  color: #00b600;
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-container input {
+  padding: 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #f8fafc;
+}
+
+.form-container input:focus {
+  outline: none;
+  border-color: #00b600;
+  background-color: white;
+}
+
+.btn-save {
+  background: #00b600;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.btn-logout {
+  background: transparent;
+  color: #ef4444;
+  padding: 14px;
+  border: 1px solid #fca5a5;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* 3. Right Content Area */
+.content-area {
+  flex: 1; /* This forces the right side to stretch and fill all remaining space */
+  padding: 50px;
+  overflow-y: auto;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.contact-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+  border: 1px solid #f1f5f9;
+}
+
+.contact-card h3 {
+  margin: 0 0 12px 0;
+  color: #0f172a;
+  font-size: 20px;
+}
+
+.contact-card p {
+  margin: 8px 0;
+  color: #64748b;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
