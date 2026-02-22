@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://img.freepik.com/premium-photo/background-lime-green-painted-wall-parrot-green-accent-wall-home-interior-design-textured-colored-wall-with-soft-details-texture-green-texture-background-summer_1028938-360570.jpg?semt=ais_user_personalization&w=740&q=80");
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;  
+
+}
